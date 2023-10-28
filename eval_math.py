@@ -38,6 +38,7 @@ def process_results(doc, completion, answer):
         temp = {'question': doc, 'output': completion, 'answer': answer}
         invalid_outputs.append(temp)
         return False
+        
 def batch_data(data_list, batch_size=1):
     n = len(data_list) // batch_size
     batch_data = []
@@ -96,7 +97,12 @@ def test_hendrycks_math(model, data_path, start=0, end=MAX_INT, batch_size=1, te
         results.append(res)
 
     acc = sum(results) / len(results)
-    print('len invalid outputs ====', len(invalid_outputs), ', valid_outputs===', invalid_outputs)
+    with open('invalid_outputs.json', 'w') as f:
+        json.dump(invalid_outputs, f)
+    with open('results.json', 'w') as f:
+        json.dump(results, f)
+
+    print('len invalid outputs ====', len(invalid_outputs))
     print('start===', start, ', end====',end)
     print('length====', len(results), ', acc====', acc)
 
