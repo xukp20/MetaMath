@@ -77,7 +77,7 @@ def test_hendrycks_math(model, data_path, start=0, end=MAX_INT, batch_size=1, te
 
     stop_tokens = ["Question:", "Question", "USER:", "USER", "ASSISTANT:", "ASSISTANT", "Instruction:", "Instruction", "Response:", "Response"]
     sampling_params = SamplingParams(temperature=0, top_p=1, max_tokens=2048, stop=stop_tokens)
-    print('sampleing =====', sampling_params)
+    print('sampling =====', sampling_params)
     llm = LLM(model=model,tensor_parallel_size=tensor_parallel_size)
     res_completions = []
     for idx, (prompt, prompt_answer) in enumerate(zip(batch_hendrycks_math_ins, hendrycks_math_answers)):
@@ -92,16 +92,34 @@ def test_hendrycks_math(model, data_path, start=0, end=MAX_INT, batch_size=1, te
             res_completions.append(generated_text)
 
     results = []
+    correct_outputs = []
+    wrong_outputs = []
     for idx, (prompt, completion, prompt_answer) in enumerate(zip(hendrycks_math_ins, res_completions, hendrycks_math_answers)):
         res = process_results(prompt, completion, prompt_answer)
         results.append(res)
+        if res:
+            correct_outputs.append({
+                'idx': idx+1,
+                'prompt': prompt,
+                'completion': completion,
+                'answer': prompt_answer
+            })
+        else:
+            wrong_outputs.append({
+                'idx': idx+1,
+                'prompt': prompt,
+                'completion': completion,
+                'answer': prompt_answer
+            })
 
     acc = sum(results) / len(results)
     with open('invalid_outputs.json', 'w') as f:
         json.dump(invalid_outputs, f)
-    with open('results.json', 'w') as f:
-        json.dump(results, f)
-
+    with open('correct_outputs.json', 'w') as f:
+        json.dump(correct_outputs, f)
+    with open('wrong_outputs.json', 'w') as f:
+        json.dump(wrong_outputs, f)
+    print('len correct outputs ====', len(correct_outputs))
     print('len invalid outputs ====', len(invalid_outputs))
     print('start===', start, ', end====',end)
     print('length====', len(results), ', acc====', acc)
