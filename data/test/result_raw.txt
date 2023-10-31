@@ -1,0 +1,80 @@
+Input a problem: What is the value of $101^{3} - 3 \cdot 101^{2} + 3 \cdot 101 -1$?
+Choose Raw or Hint (R/others): R
+GPT: [[ First, let's calculate the value of $101^{3}$, $101^{2}$ and $3 \cdot 101$.
+
+$101^{3} = 1030301$
+
+$101^{2} = 10201$
+
+$3 \cdot 101 = 303$
+
+So, the expression becomes $1030301 - 3 \cdot 10201 + 303 - 1$. ]]
+
+GPT: [[ Next, let's calculate the value of $3 \cdot 10201$.
+
+$3 \cdot 10201 = 30603$
+
+So, the expression becomes $1030301 - 30603 + 303 - 1$. ]]
+
+GPT: [[ Now, let's perform the subtraction and addition operations.
+
+$1030301 - 30603 = 1000698$
+
+$1000698 + 303 = 1001001$
+
+$1001001 - 1 = 1001000$
+
+So, the value of the expression $101^{3} - 3 \cdot 101^{2} + 3 \cdot 101 -1$ is $1001000$. ]]
+
+GPT: [[ There are no more steps to perform. 
+
+The answer is: $1001000$. ]]
+
+Answer: [[ $1001000$. ]]
+
+Steps:  ["First, let's calculate the value of $101^{3}$, $101^{2}$ and $3 \\cdot 101$.\n\n$101^{3} = 1030301$\n\n$101^{2} = 10201$\n\n$3 \\cdot 101 = 303$\n\nSo, the expression becomes $1030301 - 3 \\cdot 10201 + 303 - 1$.", "Next, let's calculate the value of $3 \\cdot 10201$.\n\n$3 \\cdot 10201 = 30603$\n\nSo, the expression becomes $1030301 - 30603 + 303 - 1$.", "Now, let's perform the subtraction and addition operations.\n\n$1030301 - 30603 = 1000698$\n\n$1000698 + 303 = 1001001$\n\n$1001001 - 1 = 1001000$\n\nSo, the value of the expression $101^{3} - 3 \\cdot 101^{2} + 3 \\cdot 101 -1$ is $1001000$.", 'There are no more steps to perform. \n\nThe answer is: $1001000$.']
+Answer:  $1001000$.
+
+
+
+
+Input a problem: A bin has 5 white balls and $k$ black balls in it, where $k$ is an unknown positive integer.  A ball is drawn at random from the bin.  If a white ball is drawn, the player wins 1 dollar, but if a black ball is drawn, the player loses 1 dollar.  If the expected $\textit{loss}$ for playing the game is 50 cents, then what is $k$?
+Choose Raw or Hint (R/others): R
+GPT: [[ The expected value of a random variable is the sum of the possible values of the variable, each multiplied by the probability of that value occurring. 
+
+In this case, the possible values are $1$ (if a white ball is drawn) and $-1$ (if a black ball is drawn). 
+
+The probability of drawing a white ball is $\frac{5}{5+k}$, and the probability of drawing a black ball is $\frac{k}{5+k}$. 
+
+So, the expected value of the game is $1 \cdot \frac{5}{5+k} + (-1) \cdot \frac{k}{5+k}$. 
+
+We are told that this expected value is $-0.5$ (since the expected loss is 50 cents). 
+
+So, we have the equation $1 \cdot \frac{5}{5+k} - 1 \cdot \frac{k}{5+k} = -0.5$. ]]
+
+GPT: [[ Let's simplify the equation.
+
+We can combine the fractions on the left side of the equation to get $\frac{5-k}{5+k} = -0.5$. 
+
+Then, we can multiply both sides of the equation by $5+k$ to get rid of the denominator on the left side. 
+
+This gives us $5 - k = -0.5(5 + k)$. ]]
+
+GPT: [[ Next, let's distribute the $-0.5$ on the right side of the equation.
+
+This gives us $5 - k = -2.5 - 0.5k$.
+
+Then, let's add $k$ to both sides of the equation to get $5 = -2.5 + 0.5k$.
+
+And finally, let's add $2.5$ to both sides of the equation to get $7.5 = 0.5k$. ]]
+
+GPT: [[ Now, we can solve for $k$ by dividing both sides of the equation by $0.5$.
+
+This gives us $k = \frac{7.5}{0.5} = 15$.
+
+So, the answer is: $k = 15$. ]]
+
+Answer: [[ $k = 15$. ]]
+
+Steps:  ['The expected value of a random variable is the sum of the possible values of the variable, each multiplied by the probability of that value occurring. \n\nIn this case, the possible values are $1$ (if a white ball is drawn) and $-1$ (if a black ball is drawn). \n\nThe probability of drawing a white ball is $\\frac{5}{5+k}$, and the probability of drawing a black ball is $\\frac{k}{5+k}$. \n\nSo, the expected value of the game is $1 \\cdot \\frac{5}{5+k} + (-1) \\cdot \\frac{k}{5+k}$. \n\nWe are told that this expected value is $-0.5$ (since the expected loss is 50 cents). \n\nSo, we have the equation $1 \\cdot \\frac{5}{5+k} - 1 \\cdot \\frac{k}{5+k} = -0.5$.', "Let's simplify the equation.\n\nWe can combine the fractions on the left side of the equation to get $\\frac{5-k}{5+k} = -0.5$. \n\nThen, we can multiply both sides of the equation by $5+k$ to get rid of the denominator on the left side. \n\nThis gives us $5 - k = -0.5(5 + k)$.", "Next, let's distribute the $-0.5$ on the right side of the equation.\n\nThis gives us $5 - k = -2.5 - 0.5k$.\n\nThen, let's add $k$ to both sides of the equation to get $5 = -2.5 + 0.5k$.\n\nAnd finally, let's add $2.5$ to both sides of the equation to get $7.5 = 0.5k$.", 'Now, we can solve for $k$ by dividing both sides of the equation by $0.5$.\n\nThis gives us $k = \\frac{7.5}{0.5} = 15$.\n\nSo, the answer is: $k = 15$.']
+Answer:  $k = 15$.

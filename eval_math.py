@@ -58,7 +58,8 @@ def test_hendrycks_math(model, data_path, start=0, end=MAX_INT, batch_size=1, te
     problem_prompt = (
         "Below is an instruction that describes a task. "
         "Write a response that appropriately completes the request.\n\n"
-        "### Instruction:\n{instruction}\n\n### Response: Let's think step by step."
+        "### Instruction:\n{instruction}\n\n### Response: "
+        # "### Instruction:\n{instruction}\n\n### Response: Let's think step by step."
     )
     print('promt =====', problem_prompt)
     with open(data_path, "r+", encoding="utf8") as f:

@@ -1,0 +1,9 @@
+The parabola with equation $y=ax^2+bx+c$ and vertex $(h,k)$ is reflected about the line $y=k$. This results in the parabola with equation $y=dx^2+ex+f$.  Express $a+b+c+d+e+f$ in terms of $k.$
+
+Find the smallest positive integer $n$ with the property that the polynomial $x^4 - nx + 63$ can be written as a product of two nonconstant polynomials with integer coefficients.
+
+Consider the polynomials $P(x) = x^6-x^5-x^3-x^2-x$ and $Q(x)=x^4-x^3-x^2-1$.  Given that $z_1, z_2, z_3$, and $z_4$ are the roots of $Q(x)=0$, find $P(z_1)+P(z_2)+P(z_3)+P(z_4).$
+
+A bin has 5 white balls and $k$ black balls in it, where $k$ is an unknown positive integer.  A ball is drawn at random from the bin.  If a white ball is drawn, the player wins 1 dollar, but if a black ball is drawn, the player loses 1 dollar.  If the expected $\textit{loss}$ for playing the game is 50 cents, then what is $k$?
+
+What is the value of $101^{3} - 3 \cdot 101^{2} + 3 \cdot 101 -1$?
