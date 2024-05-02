@@ -13,8 +13,10 @@ GPUS=8
 # END=5000
 # END=1000
 
-MODEL_PATH="/cephfs/xukangping/code/experiments/loop/modeling_coloop_phi.py"
-export MODELING_PATH=$MODEL_PATH
+# MODEL_PATH="/cephfs/xukangping/code/experiments/loop/modeling_coloop_phi.py"
+# export MODELING_PATH=$MODEL_PATH
+SAVING_DIR="./logs_base_48"
+export SAVING_DIR=$SAVING_DIR
 
 # base
 # tuned on metamath 6k
@@ -53,9 +55,9 @@ EVAL_MODEL2="/cephfs/xukangping/root/models/xukp20-metamathQA/alpaca-metamathQA-
 # accelerate launch eval_math.py --model $EVAL_MODEL1 --data_file ./data/test/GSM8K_test.jsonl --tensor_parallel_size $GPUS --batch_size=128 --gsm_8k
 
 
-EVAL_MODEL2_PREFIX="/cephfs/xukangping/root/models/xukp20-metamathQA/alpaca-metamathQA-05-01-14-01-custom/checkpoint-"
+EVAL_MODEL1_PREFIX="/cephfs/xukangping/root/models/xukp20-metamathQA/alpaca-metamathQA-05-01-00-29/checkpoint-"
 for checkpoint_step in 3000 6000 9000 12000 15000 18000
 do
-    EVAL_MODEL2=$EVAL_MODEL2_PREFIX$checkpoint_step
-    accelerate launch eval_math.py --model $EVAL_MODEL2 --data_file ./data/test/MATH_test.jsonl --tensor_parallel_size $GPUS --batch_size=128
+    EVAL_MODEL1=$EVAL_MODEL1_PREFIX$checkpoint_step
+    accelerate launch eval_math.py --model $EVAL_MODEL1 --data_file ./data/test/MATH_test.jsonl --tensor_parallel_size $GPUS --batch_size=128
 done
